@@ -25,7 +25,7 @@
 
 
 @private
-    __weak QuickDialogController *_controller;
+    __unsafe_unretained QuickDialogController *_controller;
     QRootElement *_root;
     id <UITableViewDataSource> quickDialogDataSource;
     id <UITableViewDelegate> quickDialogDelegate;

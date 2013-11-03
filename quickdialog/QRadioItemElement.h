@@ -20,7 +20,7 @@
 @interface QRadioItemElement : QLabelElement {
     NSUInteger _index;
     QRadioSection *_radioSection;
-    __weak QRadioElement *_radioElement;
+    __unsafe_unretained  QRadioElement *_radioElement;
 }
 
 - (QRadioItemElement *)initWithIndex:(NSUInteger)i1 RadioElement:(QRadioElement *)element;

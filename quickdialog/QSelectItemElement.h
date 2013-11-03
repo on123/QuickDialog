@@ -14,9 +14,9 @@
 @interface QSelectItemElement : QLabelElement
 {
     NSUInteger _index;
-    __weak QSelectSection *_selectSection;
+    __unsafe_unretained  QSelectSection *_selectSection;
 }
-@property(nonatomic, weak) QSelectSection *selectSection;
+@property(nonatomic, unsafe_unretained) QSelectSection *selectSection;
 @property(nonatomic) NSUInteger index;
 @property(nonatomic, strong) UIImage *checkmarkImage;
 @property(nonatomic, copy) NSString *checkmarkImageNamed;
