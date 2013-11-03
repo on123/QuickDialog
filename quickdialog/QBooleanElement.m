@@ -60,6 +60,9 @@
     _controller = controller;
     if ((_onImage==nil) && (_offImage==nil))  {
         UISwitch *boolSwitch = [[UISwitch alloc] init];
+        if ([boolSwitch respondsToSelector:@selector(setOnTintColor:)] && _onTintColor){
+            boolSwitch.onTintColor = _onTintColor;
+        }
         boolSwitch.on = self.boolValue;
         boolSwitch.enabled = self.enabled;
         [boolSwitch addTarget:self action:@selector(switched:) forControlEvents:UIControlEventValueChanged];

@@ -23,10 +23,12 @@
     BOOL _enabled;
     UIImage *_onImage;
     UIImage *_offImage;
+    UIColor *_onTintColor;
 }
 
 @property(nonatomic, retain) UIImage *onImage;
 @property(nonatomic, retain) UIImage *offImage;
+@property(nonatomic, retain) UIColor *onTintColor;
 @property(nonatomic, readwrite, assign) NSNumber *numberValue;
 @property (nonatomic) BOOL boolValue;
 
