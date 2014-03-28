@@ -149,7 +149,7 @@
         cell.textField.text = [selectedValue description];
         cell.detailTextLabel.text = nil;
         cell.textField.textAlignment = self.appearance.labelAlignment;
-        cell.textField.textColor = self.enabled ? self.appearance.labelColorEnabled : self.appearance.labelColorDisabled;
+        cell.textField.textColor = self.enabled ? self.appearance.valueColorEnabled : self.appearance.valueColorDisabled;
     } else {
         cell.textLabel.text = _title;
         cell.textField.text = [selectedValue description];
@@ -164,7 +164,10 @@
     _selected = aSelected;
 
     self.preselectedElementIndex = [NSIndexPath indexPathForRow:_selected inSection:0];
-    self.image = [UIImage imageNamed:[_itemsImageNames objectAtIndex:(NSUInteger) self.selected]];
+
+    if([_itemsImageNames objectAtIndex:(NSUInteger) self.selected] != nil) {
+        self.image = [UIImage imageNamed:[_itemsImageNames objectAtIndex:(NSUInteger) self.selected]];
+    }
     
     [self handleEditingChanged];
 }
